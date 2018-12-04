@@ -1,6 +1,6 @@
 <?php
 
-namespace jspapp\MonologDiscord;
+namespace sachaw\MonologDiscord;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -91,7 +91,7 @@ class DiscordHandler extends AbstractProcessingHandler
 	}
 
 	private function formatEmbeds(array $record)
-	{		
+	{
 		$fields = array();
 		foreach ($record['context'] as $key => $value) {
 			if (is_array($value)) {

@@ -1,9 +1,9 @@
 <?php
 
-namespace jspapp\MonologDiscord\Laravel;
+namespace sachaw\MonologDiscord\Laravel;
 
 use Monolog\Logger;
-use jspapp\MonologDiscord\DiscordHandler;
+use sachaw\MonologDiscord\DiscordHandler;
 
 class DiscordChannel
 {

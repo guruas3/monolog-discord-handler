@@ -1,7 +1,7 @@
 # jspapp/monolog-discord-handler
 
 ## Installation
-`composer require jspapp/monolog-discord-handler`
+`composer require sachaw/monolog-discord-handler`
 
 ## Usage
 ```php
@@ -9,7 +9,7 @@
 
 require 'vendor/autoload.php';
 
-use jspapp\MonologDiscord\DiscordHandler;
+use sachaw\MonologDiscord\DiscordHandler;
 
 $webhook = 'Your Webhook URL';
 
@@ -28,7 +28,7 @@ $log->info('This is the title!', [
 
 Import the log driver into `config/logging.php`:
 ```php
-use jspapp\MonologDiscord\Laravel\DiscordChannel;
+use sachaw\MonologDiscord\Laravel\DiscordChannel;
 ```
 and add the following driver configuration:
 ```php

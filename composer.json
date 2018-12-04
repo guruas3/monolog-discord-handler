@@ -1,17 +1,17 @@
 {
-	"name": "jspapp/monolog-discord-handler",
+	"name": "sachaw/monolog-discord-handler",
 	"description": "A Monolog handler for Discord",
 	"type": "library",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Jason Papp",
-			"email": "jspapp@gmail.com"
+			"name": "Sacha Weatherstone",
+			"email": "sachaw100@hotmail.com"
 		}
 	],
 	"autoload": {
 		"psr-4": {
-			"jspapp\\MonologDiscord\\": "src"
+			"sachaw\\MonologDiscord\\": "src"
 		}
 	},
 	"require": {
