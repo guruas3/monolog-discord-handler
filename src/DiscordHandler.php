@@ -33,14 +33,16 @@ class DiscordHandler extends AbstractProcessingHandler
 	 */
 	private $rateLimitReset;
 
-	// private const DEBUG_COLOR = ;
-	// private const INFO_COLOR = ;
-	// private const NOTICE_COLOR = ;
-	// private const WARNING_COLOR = ;
-	// private const ERROR_COLOR = ;
-	// private const CRITICAL_COLOR = ;
-	// private const ALERT_COLOR = '#cccc00';
-	// private const EMERGENCY_COLOR = '#aa0000';
+	protected $levelColors = [
+			Logger::DEBUG => 13882323,
+			Logger::INFO => 13882323,
+			Logger::NOTICE => 13882323,
+			Logger::WARNING => 13882323,
+	    Logger::ERROR => 16007990,
+	    Logger::CRITICAL => 2201331,
+	    Logger::ALERT => 16771899,
+	    Logger::EMERGENCY => 6765239,
+	];
 
 	public function __construct($webhook, $level = Logger::ERROR, bool $bubble = true)
 	{
@@ -113,8 +115,9 @@ class DiscordHandler extends AbstractProcessingHandler
 				'timestamp' => $record['datetime']->format(\DateTime::ATOM),
 				'fields' => $fields,
 				'footer' => [
-					'text' => $record['channel'].'.'.$record['level_name'],
+					'text' => $record['level_name'],
 				],
+				"color" => $this->levelColors[$record['level']],
 			]
 		];
 	}
